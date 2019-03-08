@@ -96,7 +96,7 @@ class tree:
             xc+=30
 
 tr=tree(vals)
-m=Label(root,text="Inorder:",fg="white",bg="black",font="courier 15 bold")
+m=Label(root,text="Traversal:",fg="white",bg="black",font="courier 15 bold")
 m.place(x=10,y=460)
 xc=160
 tr.postorder()
