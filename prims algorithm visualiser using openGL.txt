@@ -503,7 +503,7 @@ void menu(int id){
 
 }
 
-//this function calculated spanning tree using Prim's algorithm
+//this function calculates spanning tree using Prim's algorithm
 void find_spanning_tree(){
 	int k,u,v;
 	int sum,min,source;
