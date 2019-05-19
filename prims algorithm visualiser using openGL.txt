@@ -42,13 +42,23 @@ int pop(){
 
 //this function creates nodes using location stored in oldx[][] array
 void drawpoint(){
-	
+	float angle=2.0f*3.1416f/360;
+	int radius=25;
 	for(int i=0;i<pointer;i++){
 		glBegin(GL_POINTS);
 	glColor3f(1,1,0);
-	glVertex2i(oldx[i][0],oldx[i][1]);
+	double angle1=0.0;
+	glBegin(GL_POLYGON);
+	glVertex2d(oldx[i][0]-radius*cos(0.0),radius*sin(0.0)+oldx[i][1]);
+	for(int j=0;j<360;j++){
+
+	glVertex2d(oldx[i][0]-radius*cos(angle1),radius*sin(angle1)+oldx[i][1]);
+	angle1+=angle;
+	
+	}
 	glEnd();
 	}
+	
 	for(int i=0;i<pointer;i++){
 	glColor3f(0,0,0);
 	int_str(nodenum,num);
