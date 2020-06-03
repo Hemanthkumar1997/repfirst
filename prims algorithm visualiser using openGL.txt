@@ -295,16 +295,17 @@ void reshape(int w, int h)
 void input(){
 	int posi=-1,posj=-1;
 	int cost;
+	int center_difference_error = 4;
 	for(int i=0;i<pointer;i++){
-		if(oldx[i][0]>=(linepoints[0][0]-4)&&oldx[i][0]<=(linepoints[0][0]+4)){
-			if(oldx[i][1]>=(linepoints[0][1]-4)&&oldx[i][1]<=(linepoints[0][1]+4)){
+		if(oldx[i][0]>=(linepoints[0][0]-center_difference_error)&&oldx[i][0]<=(linepoints[0][0]+center_difference_error)){
+			if(oldx[i][1]>=(linepoints[0][1]-center_difference_error)&&oldx[i][1]<=(linepoints[0][1]+center_difference_error)){
 		       posi=i;
 			   break;}
 	    }
 	}
 	for(int i=0;i<pointer;i++){
-		if(oldx[i][0]>=(linepoints[1][0]-4)&&oldx[i][0]<=(linepoints[1][0]+4)){
-			if(oldx[i][1]>=(linepoints[1][1]-4)&&oldx[i][1]<=(linepoints[1][1]+4)){
+		if(oldx[i][0]>=(linepoints[1][0]-center_difference_error)&&oldx[i][0]<=(linepoints[1][0]+center_difference_error)){
+			if(oldx[i][1]>=(linepoints[1][1]-center_difference_error)&&oldx[i][1]<=(linepoints[1][1]+center_difference_error)){
 		       posj=i;
 			break;
 			}
